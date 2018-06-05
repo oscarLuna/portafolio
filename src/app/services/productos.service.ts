@@ -16,8 +16,10 @@ export class ProductosService {
     this.cargando_productos = true;
     this.http.get('https://pagina-portafolio.firebaseio.com/productos_idx.json')
       .subscribe( res => {
-        this.cargando_productos = false;
-        this.productos=res.json();
+        setTimeout( ()=>{
+          this.cargando_productos = false;
+          this.productos=res.json();
+        },1500)
       });
   }
 }
