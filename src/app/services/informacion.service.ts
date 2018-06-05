@@ -22,11 +22,11 @@ export class InformacionService {
    }
 
   public carga_sobre_nosotros(){
-    this.http.get("https://pagina-portafolio.firebaseio.com/equipo.json").
+    this.http.get("https://pagina-portafolio.firebaseio.com/equipo/equipo.json").
     subscribe( data => {
       this.equipo = data.json();
       this.cargada_sobre_nosotros = true;
-      console.log(this.equipo);
+      //console.log(this.equipo);
     })
   }
 }
